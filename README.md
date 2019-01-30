@@ -108,6 +108,6 @@ nothing to commit, working tree clean
 ### Pulling
 If changes are made within the remote repository, our local repository won't be automatically updated. In order to get the changes, we'll need to pull them to our local repo. To do so, use the ``` git pull ``` command. 
 ### Extra Resources
-* (Git cheat sheet)[https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf]
-* (More on branches)[https://learngitbranching.js.org/]
-* (Markdown cheat sheet)[https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf]
+* [Git cheat sheet](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf)
+* [More on branches](https://learngitbranching.js.org/)
+* [Markdown cheat sheet](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
