@@ -74,5 +74,16 @@ Git organizes things with _repositories_, also known as _repos_. You can think o
 	```
 	* Doing the add and commit stages seperatly can be annoying, so if you want to combine these steps, you can use ``` git commit -am "Your commit message here!" ```.
 	* You want to commit often, good practice is to commit every time you've added a working feature.
-	
-	
+	* Once you want to add all the commits you've been working on to the remote repo on the GitHub website, you'll need to _push_ them. This will push all the things in your local repo to your remote one. You can do this by using ``` git push ```
+### Branching
+* Good practice is to not commit directly to the master branch, especially at enterprise level. So, to make changes you'll need to make a _branch_, it's essentially a copy of another branch - typically the master branch - that you can work on without editing the master branch.
+* We're going to create a branch from our master branch called ``` branchname ```, after making sure you're in your repo, use the command ``` git branch branchname ```.
+* Your ``` git status ``` should now say 
+```
+On branch master
+nothing to commit, working tree clean
+```
+* As you can see, we're still on our master branch. To change to our newly created branch, use the command ``` git checkout branchname ```.
+* All the changes you commit will now go to your new branch instead of to the master branch. If you want to check and make sure, use ``` git checkout master ``` and open your file. None of the commits you've added to your other branch should be there.
+* When you're satisfied with all the changes you've made in your branch and are ready to merge it with master, make sure you are on your branch and use the command ``` git merge master ```.
+* If there have been changes added to master that conflict with your changes, then there will be a _merge conflict_, and Git Bash won't let you merge your branch into master until you've gone through and resolved these conflicts, which means you'll have to go through the conflicts and decide which should stay.
