@@ -51,7 +51,8 @@ Git organizes things with _repositories_, also known as _repos_. You can think o
 
 			file.txt
 
-		nothing added to commit but untracked files present (use "git add" to track) ```
+		nothing added to commit but untracked files present (use "git add" to track)
+	```
 	* Git doesn't save every change you make to your code. It stores snapshots called _commits_ you can think of these like saving your file. When you save it, it takes a new snapshot of your file that includes all the changes you've made since the last save. It's the same way with commits. 
 	* Now that we have a file, we need to add it to the staging area, which is the first stage in a commit, it allows you to still make changes without it being documented in a commit message. To do this, enter the command ``` git add file.txt ```, or if you want to add all files in a repo use the command ``` git add . ```.
 	* If we call ``` git status ``` now, you should get something like this
@@ -60,7 +61,8 @@ Git organizes things with _repositories_, also known as _repos_. You can think o
 	Changes to be committed:
 	(use "git reset HEAD <file>..." to unstage)
 
-		new file:   file.txt ```
+		new file:   file.txt
+	```
 	* This is saying that all the changes we've made since the last snapshot will be in the next commit.
 	* Once we have added all the files we want to the staging area, we're ready to commit to our local repository. To do this, use the command ``` git commit -m "Enter a commit message here!" ```. Every commit should have a _commit message_ which should be useful description of all the changes you've made since the last commit.
 	* After committing, use the ``` git status command ```. It should look like this
