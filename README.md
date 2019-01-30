@@ -29,6 +29,22 @@ Each person then wrote down the sentence on a piece of paper. These represent _b
 
 Git organizes things with _repositories_, also known as _repos_. You can think of a repository like a folder that has Git capabilites so that it can track the changes that are made.
 
+There are _local repositories_ and _remote repositories_. Local ones are only on your machine. Remote ones are on the GitHub website, these are used for working with other people and sharing your code with other people.
+
+There are two ways to make a remote repository. You can either create a fresh one on GitHub that doesn't have any preexisting repositories to upload, or you can create one and add repositories that already exist.
+
+We're going to create a fresh one.
+* Log in to your GitHub account and click the green "New repository" button on the right.
+* Name it ``` ExampleRepo ``` and since we aren't uploading any preexisting material, click the checkbox intitialize this GitHub repo with a README. Click the "Create repository" button.
+* Now you'll need to get a local version of this repository that you can make changes to, so you'll need to _clone_ it. Navigate into your repository on GitHub and click the green "Clone or download" button. Copy the link that starts with ``` git@github.com: ```.
+* In your terminal, navigate to the folder where you want to keep your local version of the repo and use the ``` git clone "[Insert link you copied here]" ``` 
+
+If you wanted to put a preexisting repo onto Github use the following steps
+* Log in to your GitHub account and click the green "New repository" button on the right.
+* Name it and leave the checkbox to initialize this GitHub repository with a README unchecked.
+* On the next page copy the link that starts with ``` git@github.com: ```
+* In your terminal, navigate into your repo and use the command ``` git remote add origin "[Insert link you copied here]". Now your local and remote repositories are connected.
+* All of your files should be ready to _push_ to the local repository. So use the command ``` git push origin master ```. This will send all the commits youv'e made locally to your remote repository.
 ### Workflow
 
 ![commit flow](https://github.com/OKStateACM/GitHubNotes2019/blob/master/git-local-remote.png)
@@ -37,7 +53,7 @@ Git organizes things with _repositories_, also known as _repos_. You can think o
 	* First you have to tell Git who you are. So if this is your first time using Git, you'll need to enter the following commands first.
 		* Give Git your name using the command ``` git config --global user.name "Your name here" ```.
 		* Give Git your email using the command ``` git config --global user.email "your.email@here.com" ```
-* Next you'll want to create a repository.
+* Next you'll want to create a local repository.
 	* Enter the command ``` git init YourFolderNameHere ```. This will create a folder named YourFolderNameHere and make it into a repository.
 	* If you already have a folder that you want to make into a repository, navigate into that folder using the ``` cd ``` command. Once inside, enter the command ``` git init ```.
 * Now let's add things to our repository!
@@ -87,3 +103,6 @@ nothing to commit, working tree clean
 * All the changes you commit will now go to your new branch instead of to the master branch. If you want to check and make sure, use ``` git checkout master ``` and open your file. None of the commits you've added to your other branch should be there.
 * When you're satisfied with all the changes you've made in your branch and are ready to merge it with master, make sure you are on your branch and use the command ``` git merge master ```.
 * If there have been changes added to master that conflict with your changes, then there will be a _merge conflict_, and Git Bash won't let you merge your branch into master until you've gone through and resolved these conflicts, which means you'll have to go through the conflicts and decide which should stay.
+* You can set your repo to require a _pull request_ which means that people can request to merge their branch with master. This is often used to ensure code review happens.
+### Pulling
+If changes are made within the remote repository, our local repository won't be automatically updated. In order to get the changes, we'll need to pull them to our local repo. To do so, use the ``` git pull ``` command. 
