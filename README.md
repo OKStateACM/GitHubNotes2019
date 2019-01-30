@@ -102,7 +102,7 @@ nothing to commit, working tree clean
 * As you can see, we're still on our master branch. To change to our newly created branch, use the command ``` git checkout branchname ```.
 * All the changes you commit will now go to your new branch instead of to the master branch. If you want to check and make sure, use ``` git checkout master ``` and open your file. None of the commits you've added to your other branch should be there.
 * If you want to add your local branch to your remote repo, use the command ``` git push -u origin branchname ```.
-* When you're satisfied with all the changes you've made in your branch and are ready to merge it with master, make sure you are on your branch and use the command ``` git merge master ```.
+* When you're satisfied with all the changes you've made in your branch and are ready to merge it with master, switch to your master branch and use the command ``` git merge branchname ```.
 * If there have been changes added to master that conflict with your changes, then there will be a _merge conflict_, and Git Bash won't let you merge your branch into master until you've gone through and resolved these conflicts, which means you'll have to go through the conflicts and decide which should stay.
 * You can set your repo to require a _pull request_ which means that people can request to merge their branch with master. This is often used to ensure code review happens.
 ### Pulling
