@@ -25,11 +25,11 @@ The above diagram shows this excercise with two people. The black line is the _m
 
 Each person then wrote down the sentence on a piece of paper. These represent _branches_. A branch is a seperate instance of the code where a programmer will make their changes. In this case we have 2 branches, Ben and Alex. Each person's branch will have the changes that they have made without changing anything on the master branch. Then Alex's changes get merged into Ben's branch and the combined changes are merged into the master branch once both people are happy with the changes.
 
-### Repositoris
+### Repositories
 
 Git organizes things with _repositories_, also known as _repos_. You can think of a repository like a folder that has Git capabilites so that it can track the changes that are made.
 
-## Workflow
+### Workflow
 
 * Once Git has finished installing, open up the terminal that you'll be using. For Mac and Linux users, this will be your regular terminal and for Windows users it will Git Bash.
 	* First you have to tell Git who you are. So if this is your first time using Git, you'll need to enter the following commands first.
